@@ -1,11 +1,7 @@
 # gat-vice-city-download
-git clone
-sudo gta-vice-city-download
+git clone https://github.com/abhishekpanthee/gat-vice-city-download.git
+ cd gta-vice-city-download
 ./start
-
-
-
-
 dontot re-upload it and also i have only modified many source but it winestaging copyright and tron copyright are also listed 
 this is only re-odification but i am working on deb pakage for kali linux 
 but this files are supported on ost linux distros..
