@@ -1,0 +1,67 @@
+#!/bin/bash
+
+###re-modified by abhishek panthee
+
+## Variables
+
+# Directory
+export SCRIPT="$(readlink -f "${BASH_SOURCE[0]}")"
+export DIR="$(dirname "$SCRIPT")"
+export HOME="$DIR/home"
+
+# Wine
+export WINE="$DIR/wine/bin/wine"
+export WINETRICKS="$DIR/winetricks"
+export WINECFG="$DIR/wine/bin/winecfg"
+export REGEDIT="$DIR/wine/bin/regedit"
+export CONSOLE="$DIR/wine/bin/wineconsole"
+export WINEFILE="$DIR/wine/bin/winefile"
+export WINESERVER="$DIR/wine/bin/wineserver"
+export WINEPREFIX="$DIR/prefix"
+export WINEDEBUG="-all"
+export WINEDLLOVERRIDES="mscoree,mshtml="
+
+# Arguments
+export ARGS="-cfg, -reg, -console, -fm, -kill, -tri, -clean"
+
+## Actions
+
+# Create a home directory
+if [ "$HOME" == "$DIR/home" ] && [ ! -d "$HOME" ]
+then mkdir "$HOME"
+fi
+
+if [ "$1" == "-cfg" ]
+then "$WINECFG"
+elif [ "$1" == "-reg" ]
+then "$REGEDIT"
+elif [ "$1" == "-console" ]
+then "$CONSOLE"
+elif [ "$1" == "-fm" ]
+then "$WINEFILE"
+elif [ "$1" == "-kill" ]
+then "$WINESERVER" -k
+elif [ "$1" == "-tri" ]
+then "$WINETRICKS" $2 $3 $4 $5 $6 $7 $8
+elif [ "$1" == "-clean" ]
+then rm -f "$DIR/csmt_on"
+	rm -f "$DIR/alsa"
+	rm -f "$DIR/pulse"
+#	rm -rf "$DIR/home"
+	rm -rf "$WINEPREFIX/dosdevices"
+	rm -f "$WINEPREFIX/system.reg"
+	rm -f "$WINEPREFIX/user.reg"
+	rm -f "$WINEPREFIX/userdef.reg"
+	rm -f "$WINEPREFIX/winetricks.log"
+	rm -f "$WINEPREFIX/.update-timestamp"
+	rm -rf "$WINEPREFIX/drive_c/ProgramData"
+	rm -rf "$WINEPREFIX/drive_c/Program Files"
+	rm -rf "$WINEPREFIX/drive_c/Program Files (x86)"
+	rm -rf "$WINEPREFIX/drive_c/users"
+	rm -rf "$WINEPREFIX/drive_c/windows"
+	rm -f "$WINEPREFIX/drive_c/.windows-serial"
+else clear
+	echo "Доступные аргументы:"
+	echo
+	echo "$ARGS"
+fi
