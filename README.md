@@ -2,6 +2,9 @@
   1st step >>  git clone https://github.com/abhishekpanthee/gat-vice-city-download.git
   2nd step >>  cd gta-vice-city-download
  3rd step  >> ./start
+ also download prefix folder from -- https://mega.nz/file/Ty4lSahD#jjIqTrbHz5lw1Ji5hwqxG-OtyyBCDs83Rau39FHiqYo
+ Thanks to MR DJ ffor providing win directory support and intrid.image 
+ also i have not made it but collected dtata around 30 diffrent sites so copyright information is quite zigzaged.
 dontot re-upload it and also i have only modified many source but it winestaging copyright and tron copyright are also listed 
 this is only re-odification but i am working on deb pakage for kali linux 
 but this files are supported on ost linux distros..
