@@ -10,3 +10,5 @@ also if you find any bug report it to me and
 i will upload  gta san-andreas deb pakage which is not available in whole internet so lets hope i can try to make it  
 also important message !!!!! donot open it with root prevailages !!!!!
 also thanks m4rkain for management .
+Also diffrent copyright is given in diffrent sh sile and text file as i have not ofiicially made but assembled for proper use 
+and there are some files such as bbb,hello,hello123 which can be deleted 
